@@ -69,7 +69,7 @@ pipeline {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
-               sh 'docker build -t ziedfadhlaoui/tp-foyer:1.0.0 .'
+               sh 'docker build -t ziedfadhlaouiTestAlpine/tp-foyer:1.0.0 .'
            // }
             }
         }
