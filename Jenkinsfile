@@ -40,14 +40,14 @@ pipeline {
 
        }
 
-     stage('MVN SONARQUBE') {
+   /*  stage('MVN SONARQUBE') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=Sonarsonar1!'
            // }
             }
-        }
+        }*/
   stage('nexus') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
