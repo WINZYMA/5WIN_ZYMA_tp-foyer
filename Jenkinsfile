@@ -65,21 +65,21 @@ pipeline {
            // }
             }
         }
-   stage('Docker image') {
+/*   stage('Docker image') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
                sh 'docker build -t ziedfadhlaouiTestAlpine/tp-foyer:1.0.0 .'
            // }
             }
-        }
+        }*/
     stage('Push image') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
                sh 'docker login -u ziedfadh -p dckr_pat_sfr9IpBlFeAabiq8IIMLK8dWWcA'
 
-             sh 'docker push ziedfadhlaouiTestAlpine/tp-foyer:1.0.0'
+             sh 'docker push ziedfadhlaoui/tp-foyer:1.0.0'
            // }
             }
         }
