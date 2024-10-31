@@ -48,6 +48,23 @@ pipeline {
            // }
             }
         }
+  stage('nexus') {
+            steps {
+               // withSonarQubeEnv(installationName: 'sonarq')
+         //   {
+               sh 'mvn package -DskipTests'
+           // }
+            }
+        }
+
+    stage('deploy nexus') {
+            steps {
+               // withSonarQubeEnv(installationName: 'sonarq')
+         //   {
+               sh 'mvn deploy -DskipTests'
+           // }
+            }
+        }
 
  }
 
