@@ -30,15 +30,24 @@ pipeline {
  }
 
  }
-  stage ('Compile Stage') {
+   stage ('Compile Stage') {
 
- steps {
+      steps {
 
- sh 'mvn clean compile'
+          sh 'mvn clean compile'
 
- }
+         }
 
- }
+       }
+
+     stage('MVN SONARQUBE') {
+            steps {
+               // withSonarQubeEnv(installationName: 'sonarq')
+         //   {
+               sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=Sonarsonar1!'
+           // }
+            }
+        }
 
  }
 
