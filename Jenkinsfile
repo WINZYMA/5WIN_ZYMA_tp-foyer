@@ -64,15 +64,15 @@ pipeline {
                sh 'mvn deploy -DskipTests'
            // }
             }
-        }
-/*   stage('Docker image') {
+        }*/
+  stage('Docker image') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
-               sh 'docker build -t ziedfadhlaouiTestAlpine/tp-foyer:1.0.0 .'
+               sh 'docker build -t ziedfadhlaoui/tp-foyer:1.0.0 .'
            // }
             }
-        }*/
+        }
     stage('Push image') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
