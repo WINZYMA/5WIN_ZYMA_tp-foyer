@@ -77,7 +77,7 @@ pipeline {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
-               sh 'docker login -u ziedfadh -p dckr_pat_sfr9IpBlFeAabiq8IIMLK8dWWcA'
+               sh 'docker login -u ziedfadhlaoui -p dckr_pat_0lYmtgDsboGslTwn78aOkZQIG-Y'
 
              sh 'docker push ziedfadhlaoui/tp-foyer:1.0.0'
            // }
