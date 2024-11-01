@@ -65,14 +65,14 @@ pipeline {
            // }
             }
         }*/
-  stage('Docker image') {
+  /*stage('Docker image') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
                sh 'docker build -t ziedfadhlaoui/tp-foyer:1.0.0 .'
            // }
             }
-        }
+        }*/
     stage('Push image') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
