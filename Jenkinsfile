@@ -48,7 +48,7 @@ pipeline {
            // }
             }
         }*/
-  stage('nexus') {
+/*  stage('nexus') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
