@@ -75,13 +75,17 @@ pipeline {
         }*/
     stage('Push image') {
             steps {
-               // withSonarQubeEnv(installationName: 'sonarq')
-         //   {
+         
                sh 'docker login -u ziedfadhlaoui -p dckr_pat_0lYmtgDsboGslTwn78aOkZQIG-Y'
 
              sh 'docker push ziedfadhlaoui/tp-foyer:1.0.0'
-           // }
             }
+        }
+
+    stage('Docker compose') {
+            steps {
+             sh 'docker compose up -d'
+             }
         }
 
 
