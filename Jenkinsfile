@@ -40,15 +40,15 @@ pipeline {
 
        }
 
-   /*  stage('MVN SONARQUBE') {
+     stage('MVN SONARQUBE') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=Sonarsonar1!'
            // }
             }
-        }*/
-/*  stage('nexus') {
+        }
+ stage('nexus') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
@@ -64,15 +64,16 @@ pipeline {
                sh 'mvn deploy -DskipTests'
            // }
             }
-        }*/
-  /*stage('Docker image') {
+        }
+  stage('Docker image') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
                sh 'docker build -t ziedfadhlaoui/tp-foyer:1.0.0 .'
            // }
             }
-        }*/
+        }
+  
     stage('Push image') {
             steps {
          
