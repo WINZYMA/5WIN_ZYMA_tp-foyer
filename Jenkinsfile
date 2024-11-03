@@ -21,7 +21,7 @@ pipeline {
 
      }
 
- stage ('clean Stage') {
+ stage ('Clean Stage') {
 
  steps {
 
@@ -40,7 +40,7 @@ pipeline {
 
        }
 
-     stage('MVN SONARQUBE') {
+     stage('SONARQUBE') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
@@ -48,7 +48,7 @@ pipeline {
            // }
             }
         }
- stage('nexus') {
+ stage('Nexus') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
@@ -57,7 +57,7 @@ pipeline {
             }
         }
 
-    stage('deploy nexus') {
+    stage('Deploy Nexus') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
@@ -65,7 +65,7 @@ pipeline {
            // }
             }
         }
-  stage('Docker image') {
+  stage('Docker Image') {
             steps {
                // withSonarQubeEnv(installationName: 'sonarq')
          //   {
@@ -74,7 +74,7 @@ pipeline {
             }
         }
   
-    stage('Push image') {
+    stage('Push Docker Image') {
             steps {
          
                sh 'docker login -u ziedfadhlaoui -p dckr_pat_0lYmtgDsboGslTwn78aOkZQIG-Y'
@@ -83,7 +83,7 @@ pipeline {
             }
         }
 
-    stage('Docker compose') {
+    stage('Docker Compose') {
             steps {
              sh 'docker compose up -d'
              }
