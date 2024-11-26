@@ -1,9 +1,7 @@
 FROM openjdk:17-alpine
-# Set the working directory
-WORKDIR /app
-
-COPY target/*.jar /app.jar
-
+WORKDIR /5Winyouness
+RUN ls -la
+COPY target/carecareforEldres-0.0.1-SNAPSHOT.jar /usr/local/lib/5Winyouness.jar
 EXPOSE 8089
-
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+USER root
+ENTRYPOINT ["java", "-jar", "/usr/local/lib/5Winyouness.jar"]
